@@ -1,0 +1,96 @@
+/* Admin design system — brand colors only (navy / red / light / muted) */
+
+.admin-shell {
+  background:
+    radial-gradient(ellipse 80% 50% at 100% -10%, rgba(237, 28, 46, 0.06), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(7, 29, 88, 0.05), transparent 45%),
+    #f4f6fb;
+}
+
+.admin-card {
+  @apply rounded-2xl border border-navy/[0.06] bg-white shadow-soft transition duration-200;
+}
+
+.admin-card-hover {
+  @apply hover:-translate-y-0.5 hover:border-navy/10 hover:shadow-card;
+}
+
+.admin-panel {
+  @apply overflow-hidden rounded-2xl border border-navy/[0.06] bg-white shadow-soft;
+}
+
+.admin-btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.admin-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-red px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-red/20 transition duration-200 hover:bg-red-dark hover:shadow-md hover:shadow-red/25 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.admin-btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-navy/10 bg-white px-4 py-2.5 text-sm font-semibold text-navy transition duration-200 hover:border-navy/20 hover:bg-light active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.admin-btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-transparent px-4 py-2.5 text-sm font-semibold text-muted transition duration-200 hover:bg-navy/[0.04] hover:text-navy;
+}
+
+.admin-btn-danger {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-red/20 bg-white px-4 py-2.5 text-sm font-semibold text-red transition duration-200 hover:bg-red/5 active:scale-[0.98];
+}
+
+.admin-input {
+  @apply w-full rounded-xl border border-navy/10 bg-light px-3.5 py-2.5 text-sm text-navy outline-none transition duration-200 placeholder:text-muted/50 focus:border-red/40 focus:bg-white focus:ring-2 focus:ring-red/10;
+}
+
+.admin-search {
+  @apply flex items-center gap-3 rounded-2xl border border-navy/[0.06] bg-white px-4 py-3 shadow-soft transition duration-200 focus-within:border-red/25 focus-within:ring-2 focus-within:ring-red/10;
+}
+
+.admin-table-wrap {
+  @apply overflow-x-auto;
+}
+
+.admin-table {
+  @apply min-w-full text-left text-sm;
+}
+
+.admin-table thead {
+  @apply bg-light/90 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted;
+}
+
+.admin-table th {
+  @apply px-5 py-3.5 font-semibold sm:px-6;
+}
+
+.admin-table td {
+  @apply px-5 py-4 align-middle sm:px-6;
+}
+
+.admin-table tbody tr {
+  @apply border-t border-navy/[0.05] transition duration-150 hover:bg-navy/[0.02];
+}
+
+.admin-icon-btn {
+  @apply inline-flex h-9 w-9 items-center justify-center rounded-xl border border-navy/10 bg-white text-navy transition duration-200 hover:border-navy/20 hover:bg-light active:scale-95;
+}
+
+.admin-section-title {
+  @apply text-base font-bold tracking-tight text-navy sm:text-lg;
+}
+
+.admin-section-sub {
+  @apply mt-0.5 text-xs text-muted sm:text-sm;
+}
+
+.admin-chip {
+  @apply inline-flex items-center rounded-full px-3 py-1.5 text-xs font-semibold capitalize transition duration-200;
+}
+
+.admin-chip-active {
+  @apply bg-navy text-white shadow-sm;
+}
+
+.admin-chip-idle {
+  @apply bg-white text-muted ring-1 ring-navy/10 hover:bg-light hover:text-navy;
+}

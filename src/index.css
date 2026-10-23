@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "./admin/admin.css";
+
+@theme {
+  --color-navy: #071d58;
+  --color-navy-secondary: #102d69;
+  --color-navy-deep: #04133a;
+  --color-red: #ed1c2e;
+  --color-red-dark: #c91424;
+  --color-light: #f7f9fc;
+  --color-muted: #64748b;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --shadow-card: 0 14px 40px rgba(7, 29, 88, 0.1);
+  --shadow-soft: 0 6px 24px rgba(7, 29, 88, 0.07);
+  --shadow-lift: 0 18px 50px rgba(7, 29, 88, 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-navy antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  ::selection {
+    @apply bg-red/20 text-navy;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-16;
+  }
+
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .section-label {
+    @apply mb-2 text-xs font-bold uppercase tracking-[0.2em] text-red;
+  }
+
+  .section-sub {
+    @apply mt-3 text-sm leading-relaxed text-muted sm:text-base;
+  }
+}
+
+@keyframes announce-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.announce-marquee {
+  animation: announce-marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.announce-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announce-marquee {
+    animation: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
