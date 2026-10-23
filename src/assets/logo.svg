@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none" role="img" aria-label="MY CAR RENTAL">
+  <g transform="translate(2,4)">
+    <path d="M10 36c0-10.5 8.5-19 19-19s19 8.5 19 19" stroke="#ED1C2E" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="29" cy="17" r="7" fill="#ED1C2E"/>
+    <circle cx="29" cy="17" r="3.2" fill="#fff"/>
+    <path d="M14 40.5h30" stroke="#071D58" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M18 44.5h22" stroke="#071D58" stroke-width="2.2" stroke-linecap="round" opacity="0.35"/>
+  </g>
+  <g fill="#071D58">
+    <text x="68" y="28" font-family="Poppins, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="0.5">MY CAR RENTAL</text>
+  </g>
+  <text x="68" y="46" font-family="Poppins, Arial, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.6" fill="#ED1C2E">ROULEZ EN TOUTE SÉCURITÉ</text>
+</svg>
